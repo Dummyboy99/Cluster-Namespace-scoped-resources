@@ -58,9 +58,10 @@ metadata:
   namespace: rohank-ns
 spec:
   selector:
-    app: ipl
+    app: rohank-app
   ports:
   - protocol: TCP
     port: 80
     externalName: flipkart.com, amazon.com
   type: ExternalName
+
