@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: rohank-deployment
+  namespace: rohank-ns
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rohank-dp
+  template:
+    metadata:
+      labels:
+        app: rohank-dp
+    spec:
+      containers:
+        - name: rohank-nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: rohank-configmap
+            - secretRef:
+                name: rohank-secret

@@ -1,0 +1,36 @@
+# yaml file for service type ClusterIp
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: rohank-cip-svc
+#   namespace: rohank-ns
+# spec:
+#   selector:
+#     app: rohank-app
+#   ports:
+#   - protocol: TCP
+#     port:  80
+#     targetPort:  8080
+#   type: ClusterIp
+
+
+
+# yaml file for service type Nodeport
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: rohank-np-svc
+#   namespace: rohank-ns
+# spec:
+#   selector:
+#     app: rohank-app
+#   ports:
+#   - protocol: TCP
+#     port: 80
+#     targetPort: 8080
+#     nodePort: 32051
+#   type: Nodeport
+
+
+
+#

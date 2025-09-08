@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pods
+metadata:
+  name: rohak-pod
+  namespace: rohank-ns
+  labels: 
+    app: rohank-app
+  spec:
+    containers:
+      - name: rohank-nginx
+        image: nginx:latest
+        ports:
+          - containerPort: 80

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: rohank-replica
+  namespace: rohank-ns
+  labels:
+    app: rohank-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rohank-rs
+    template:
+      metadata:
+        labels:
+          app: rohank-rs
+      spec:
+        containers:
+        - name: rohank-nginx
+          image: nginx:latest
+          ports: 
+          - containerPort: 80
