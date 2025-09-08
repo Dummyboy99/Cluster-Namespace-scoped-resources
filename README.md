@@ -1,0 +1,1 @@
+# Cluster-Namespace-scoped-resources
